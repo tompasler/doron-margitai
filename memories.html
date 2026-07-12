@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>זיכרונות ועדויות — דורון מרגיטאי ז"ל</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: #0a0a0a;
+  color: #e8e0d0;
+  overflow-x: hidden;
+}
+
+.page-header {
+  background: linear-gradient(to bottom, #1a1510, #0a0a0a);
+  padding: 70px 40px 50px;
+  text-align: center; border-bottom: 1px solid rgba(201,169,110,0.15);
+}
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #c9a96e; text-decoration: none; font-size: 14px;
+  letter-spacing: 1px; margin-bottom: 30px;
+  opacity: 0.7; transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 1; }
+.page-label { font-size: 11px; letter-spacing: 4px; color: #c9a96e; text-transform: uppercase; margin-bottom: 12px; }
+.page-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700; color: #e8e0d0; margin-bottom: 10px;
+}
+.page-sub { font-size: 15px; color: #777; }
+.divider {
+  width: 100px; height: 1px;
+  background: linear-gradient(to left, transparent, #c9a96e, transparent);
+  margin: 24px auto 0;
+}
+
+/* Filter buttons */
+.filters {
+  display: flex; justify-content: center; gap: 12px;
+  padding: 30px 20px 0; flex-wrap: wrap;
+}
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(201,169,110,0.3);
+  color: #888; padding: 8px 20px; border-radius: 20px;
+  font-family: 'Heebo', sans-serif; font-size: 14px;
+  cursor: pointer; transition: all 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+  border-color: #c9a96e; color: #c9a96e;
+  background: rgba(201,169,110,0.08);
+}
+
+.memories-grid {
+  max-width: 1100px; margin: 0 auto; padding: 50px 30px 60px;
+  columns: 2; column-gap: 24px;
+}
+@media (max-width: 700px) {
+  .memories-grid { columns: 1; padding: 30px 16px; }
+}
+
+/* Memory card - personal stories */
+.memory-card {
+  break-inside: avoid;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,169,110,0.12);
+  border-radius: 4px; padding: 28px 28px 24px;
+  margin-bottom: 24px;
+  transition: border-color 0.3s, background 0.3s;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.5s forwards;
+}
+.memory-card:hover {
+  border-color: rgba(201,169,110,0.3);
+  background: rgba(201,169,110,0.04);
+}
+
+/* Quote card - Doron's sayings */
+.quote-card {
+  break-inside: avoid;
+  background: rgba(201,169,110,0.07);
+  border: 1px solid rgba(201,169,110,0.25);
+  border-right: 3px solid #c9a96e;
+  border-radius: 4px; padding: 24px 28px 20px;
+  margin-bottom: 24px;
+  opacity: 0; transform: translateY(20px);
+  animation: fadeUp 0.5s forwards;
+  transition: background 0.3s;
+}
+.quote-card:hover { background: rgba(201,169,110,0.11); }
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; color: rgba(201,169,110,0.4);
+  line-height: 0.6; margin-bottom: 12px; display: block;
+}
+.quote-text {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 17px; line-height: 1.75;
+  color: #d8ceb8; white-space: pre-line;
+}
+.quote-label {
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid rgba(201,169,110,0.15);
+  font-size: 11px; letter-spacing: 2px;
+  color: #c9a96e; text-transform: uppercase;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.memory-text {
+  font-size: 15px; line-height: 1.85;
+  color: #c8c0b0; white-space: pre-line;
+  margin-bottom: 18px;
+}
+.memory-footer {
+  display: flex; align-items: center; gap: 10px;
+  border-top: 1px solid rgba(201,169,110,0.1);
+  padding-top: 14px;
+}
+.memory-avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(201,169,110,0.15);
+  border: 1px solid rgba(201,169,110,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: #c9a96e; flex-shrink: 0;
+}
+.memory-name { font-size: 13px; color: #c9a96e; font-weight: 600; letter-spacing: 0.5px; }
+
+.hidden { display: none; }
+
+footer {
+  text-align: center; padding: 40px;
+  border-top: 1px solid rgba(201,169,110,0.1);
+  color: #555; font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back-link">← חזרה לדף הראשי</a>
+  <div class="page-label">זיכרונות ועדויות</div>
+  <div class="page-title">מה אמרו על דורון</div>
+  <div class="page-sub">זיכרונות אישיים ואמרות מהשטח</div>
+  <div class="divider"></div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" onclick="filter('all', this)">הכל</button>
+  <button class="filter-btn" onclick="filter('memory', this)">💬 זיכרונות אישיים</button>
+  <button class="filter-btn" onclick="filter('quote', this)">✦ אמרות של דורון</button>
+</div>
+
+<div class="memories-grid" id="memoriesGrid"></div>
+
+<footer>לזכרו של דורון מרגיטאי ז"ל • פרמדיק בכיר ומדריך במגן דוד אדום</footer>
+
+<script>
+const memories = [
+  { type: 'memory', name: "מירית חלפון", text: 'אט"ן חולון. סוף משמרת, דורון: "יש לכם 4 דקות לטפל" כל התרופות עפות באוויר בזמן ניהול mi על סף החייאה. סיימנו ואז דורון "אני מרגיש כמו זונה שעבדה כל הלילה".' },
+  { type: 'memory', name: "שחר לרר", text: 'קפ"צ 10, שיחת סיום שלב א, עוד רגע יוצאים לטירונות.\nכל נציגי מד"א מקשקשים על כמה הטירונות היא בזבוז זמן, "סיימו את זה כי חייבים ובואו נחזור ללו"ז".\nדורון יושב בפאנל שלהם, ושותק בצורה מאוד לא אופיינית, עושה פרצוף.\nפניתי אחרי לשאול למה — מה דעתו על מה שנאמר?\nהוא מסתכל עלי ואומר: "תשקיע בטירונות, כי אתה לא הולך להיות פראמדיק, אלא פראמדיק צבאי. מה שיציל לך את החיים יהיה כמה מהר אתה מתפעל את הנשק שלך, לא כמה מהר אתה עושה אינטובציה".\n\n20 שנים אחרי, עדיין עושה מילואים, עדיין חושב על דורון כל פעם שאני חותם על נשק.\n\nאדם דגול, ענק בין גמדים. יהי זכרו ברוך.' },
+  { type: 'memory', name: "רון טולדנו", text: 'ישבנו עם כל הסגל ורצינות תהומית על טבלה צבעונית לשיבוץ חניכים. דורון הסתכל עלינו במבט המופתע-חצי-בצחוק שלו ואמר:\n״חבר׳ה, תקשיבו לי — האנשים המוצלחים באמת בחיים הם אלו שיודעים גם לחפף.״\n\nאני בן 35 והמשפט הזה מלווה אותי עד היום, 15 שנה אחרי. ת.נ.צ.ב.ה.' },
+  { type: 'memory', name: "קים אזולאי", text: 'דורון היה הסיבה העיקרית שבחרתי להשתלם במד"א חולון. הייתי חייבת לספוג מהאיש הזה כמה שיותר. ממש הערכתי והערצתי אותו — פראמדיק, מורה ומדריך, השנינות, ההומור, החדות, האווירה הטובה שנתן לצוות.\n\nזו באמת זכות גדולה להיות עוד אחת מהאנשים שהוא השפיע עליהם לדורות. יהי זכרו ברוך.' },
+  { type: 'memory', name: 'קפ"צ 15 מקבץ', text: 'ציטוטי דורון מהקפ"צ:\n• "אתה יכול גם לגמור לו בתוך הטובוס, אבל מה זה יעזור"\n• "לנסות להלביש גופה זה כמו לנסות להחזיר משחת שיניים לשפורפרת"\n• "אינטובציה זה כמו בסקס, הכל ענין של תנוחה וזוויות"\n• "הגייד זה הזקפה של הטובוס"' },
+  { type: 'memory', name: "ארבל בן זקן", text: 'את דורון הכרתי בתור חניך בקורס פרמדיקים צבאי — תמיד חיכיתי לשיעורים איתו שהיו מלאי עניין בכמויות של ידע. תמיד ידע לומר את הדברים כמו שהם בלי ליפות אותם.\n\nלא היה פרמדיק שלא הכיר אותו וזכר את הידע הפנומנלי שלו וחוש ההומור הבוטה והמשובח. תמיד אזכור אותו לטובה.' },
+  { type: 'memory', name: "גיל ומושר", text: 'לפני תקופת הפרוטוקולים היתה תקופה שאנשים בנו את מקצוע הפראמדיק במו ידיהם. חצבו את ה-Guide Lines. התוו דרך. הם כתבו את "התורה".\n\nאחד האנשים הללו הלך מאיתנו — דורון מרגיטאי. היו מעט מאוד אנשים שאתה יכול לומר עליהם מנטורים — דורון היה מנטור, מורה דרך, וחבר.\n\nבאנו מתחנת לוד, לא ידענו כלום. אמרנו לו שאין לנו למה ללכת מחר. הוא צחק ואמר — מצוין שאתם לא יודעים, נלמד אתכם הכל, כמו שצריך.\n\nבליבי יש לו מקום תמיד — וגם בתולדות ימי הפראמדיקים במד"א ובארץ.' },
+  { type: 'memory', name: "ענבר עדני", text: 'דורון היה פרמדיק בחסד עליון. עוד בקורס מדריכים אחרים דיברו עליו ואמרו שהוא הפרמדיק האגדי.\n\nעד היום אני נותנת גלוקוז כמוהו. הוא ידע מנגנונים של תרופות בצורה פנומנלית. היה קורא את שם המטופל בויזה ויודע להגיד בדיוק מה המחלות שיש לו ברקע — וכשהגענו לחולה הכל היה בדיוק כמו שתיאר. זה היה מדהים.\n\nאני מודה על כך שהייתה לי הזכות ללמוד ממנו.' },
+  { type: 'memory', name: "בר בוהדנה", text: 'לדורון היה LG G3.\nבמהלך המשמרת הטלפון התחמם לו בכיס ואז הגיע הסיפור על איך הטלפון "הרים לו את הג\'ק" בלי סיאליס...' },
+  { type: 'memory', name: "רוני שיסגל", text: 'אני זוכרת את המפגש הראשון עם דורון בקורס פרמדיקים ב-2013. אחד המשפטים הראשונים שלו היה:\n״גינקולוג גבר הוא כמו מוסכניק שאף פעם לא היה לו רכב.״\n\nמשפט אגדי שאני מספרת כבר שנים. ידעתי כבר אז שמדובר באיש מיוחד — שנון, חד. וזה עוד לפני שגיליתי איזה איש מקצוע הוא, עם אהבה אמיתית ועמוקה למקצוע ולמטופלים. אחד ויחיד במינו. הוא כבר חסר.' },
+  { type: 'memory', name: "דביר מקלר", text: 'לדורון היה תחביב — משחק ניחושים. כשהיתה מתקבלת קריאה הוא ניסה לספר את סיפור המקרה עוד בדרך, לפני שראה את המטופל. השתמש בפרטים שנראים הכי לא חשובים: כתובת, שם, גיל. והעניין המדהים — זה עבד. הוא קלע כל פעם.\n\nבאחת הקריאות אמר לי: "קוראים למטופלת צילה והיא גרה בשכונה ותיקה של חולון. אני מנחש שהיא מורה." כשהגענו — אכן מורה, מהדור הראשון של תושבי חולון.\n\nדורון התחיל להסתובב בבית כמו בלש. אחרי כמה דקות אמר לי: "יש הרבה תמונות של הילדים שלה. נראה לי שהגברת פשוט בודדה." ומהשלב הזה — התיישב ודיבר איתה. פשוט התעניין בה כאילו היא הדבר היחיד שקיים.\n\nכזה היה דורון. חכם בצורה בלתי רגילה. בלש רפואי. ובעיקר — רגיש למי שעומד מולו.\n\nדורון היקר. כואב את לכתך. — דביר.' },
+  { type: 'memory', name: "יערה לבון", text: 'דורון היה איש מקסים ואדיב ודוגמה כאדם וכפרמדיק. מאחורי ההומור השחור עמד אדם נעים וחם שתמיד כיבד את המשתלמים.\n\nבמשמרת הראשונה אמר לי שהאטומידט יהרוג לי מטופלים — הוא היה היחיד שאמר את זה כשכולם התלהבו מהתרופה. הוא צדק לגמרי ונזהרתי מאוד בזכותו.\n\nפעם שמטופל פסיכוטי העביר לי יד — לפני שהבנתי מה קורה דורון כבר ישב עליו. ככה גיליתי שידע איקידו.\n\nהוא זכור לי כאחד הפרמדיקים היחידים שבאמת הייתי לידם בנוח. הוא יישאר איתי בלב לתמיד.' },
+  { type: 'memory', name: "גבריאל מומקו", text: 'הייתי נהג די חדש במד"א. הגענו למקרה שהתדרדר להחייאה, הזמנו אט"ן ולמזלנו הגיע דורון.\n\nבמהלך ההחייאה הוא שמר על שקט נפשי, ידע בדיוק מה לעשות, ועשה הכל בצורה ענווה ושקטה תוך כדי טיצ\'ינג לכל מי שהיה מסביבו. המטופל ניצל.\n\nאת המקרה הזה אני לא אשכח לעולם — בזכותו של דורון שפשוט היה כל כך מקצוען ורחב לב. נתגעגע אליו תמיד!' },
+  { type: 'memory', name: "עדי אוחיון", text: 'בעלי אורי דיבר המון על דורון וממש העריץ אותו. יום אחד נתקלתי בדורון בחולון ואמרתי לו שבעלי אומר שהוא האדם הכי חכם שהוא פגש בחייו.\n\nהוא היה די בשוק — אבל ראיתי איך סומק מתפשט בלחייו ונוצות הטווס לאט נפתחות. כמה רוחו מתרוממת למשמע המילים הטובות.\n\nשמחתי שיכולתי להעניק לאיש המיוחד הזה כמה רגעים של נחת. לא נשכח אותו לעולם. — עדי ואורי אוחיון.' },
+  { type: 'memory', name: "שלמה סמבול", text: 'זכיתי לעבוד עם דורון כנהג נט"ן כאשר היה פרמדיק אחראי בסניף לוד-רמלה בתחילת שנות התשעים. גם הוא היה כמוני רנטגנאי וזה היה אחד מנושאי השיחה ביננו. איש יקר היה. יהי זכרו ברוך!' },
+  { type: 'memory', name: "תום פסלר", text: 'כשנפתח האט"ן בחולון בשנת 1998 הייתי בן 18. שמו של דורון נאמר ביראת כבוד — הפרמדיק התותח מלוד.\n\nהוא הגיע. ומיד הבנתי שזה משהו אחר. הסתכל לנו תמיד בגובה העיניים, נתן כבוד לכל איש ואשת צוות — ולימד. גם במקרים הכי קשים תמיד הסביר וענה על שאלות.\n\nהוא לא היה הפרמדיק הכי טוב, המדריך הכי טוב, העובד הכי טוב — היה התגלמות של כולם באדם אחד.\n\nאין הרבה אנשים שממש הערצתי בחיי, והוא הראשון — כי פיו, מעשיו וליבו היו תמיד שווים.\n\nבהערכה והערצה אמיתיות. — תום' },
+  { type: 'memory', name: "בכרך", text: 'עבדתי עם דורון הרבה שנים בלוד, אחר כך בחולון. לא הייתי מהמדויקים — בלשון המעטה — אבל תמיד השתדלתי יותר בהחלפת משמרת עם דורון.\n\nיום אחד הגעתי ב-15:05. דורון, בדרכו המיוחדת, אמר לי:\n״בכרך, אני בסך הכל מחבב אותך — אבל כבר חמש עשרה דקות אני שונא אותך ממש 🤣״' },
+  { type: 'memory', name: "רונן כהן", text: "דורק'ה — מי היה מאמין שאכתוב עליך בלשון עבר.\n\nדורון היה אחד מהמדריכים שלי בקורס פראמדיקים מספר 16. לא ספר מהלך — אנציקלופדיה מהלכת.\n\nאחרי פיגוע במועדון השפילד ב-2002 — שנינו הגענו מהבית. אני עם הרכב, ודורון רץ כל הדרך מחולון לראשל\"צ. הוא אמר לי אחר כך שכשהגיע, מהמאמץ, \"הלשון שלו טיאטאה את הכביש\" — ותנועת יד שהדגימה... הומור מרגיטאי שכזה.\n\nהתברר שפצוע שטיפלנו בו חיפש אותנו 13 שנה להודות לנו. רק ב-2015 נוצר החיבור.\n\nככה אני בוחר לזכור את דורק'ה — האיש שהפך לאגדה עוד בחייו. כמו שנאמר במסכת אבות — 'העמיד תלמידים הרבה'.\nנוח על משכבך בשלום, חבר יקר." },
+  { type: 'memory', name: "אריאל קורן", text: 'כל כך הרבה אנשים חייבים את חייהם לאיש הזה. איש אציל נפש שלא רק הציל רבבות — הוא גם עיצב את אופיים המקצועי של דורות של פרמדיקים.\n\nדורון היה אינטליגנט ומבריק, סבלני, בעל חוש הומור יוצא דופן — ועם זאת, צנוע מאד ואנושי מאד.\n\nגאה להיות בין חניכיו הרבים. רבות עוד יסופר עליו. אבדה עצומה לכולנו. תנצב"ה.' },
+  { type: 'memory', name: "שלמי ארז", text: 'אגדה.\n\nבעברי זכיתי לעבוד איתו המון שנים. אדם עם לב ענק — אנושי, מחונן ובעל חוש הומור מיוחד וחד. הציל המון אנשים ותרם רבות למאות אנשים.\n\nיהי זכרו ברוך. עצוב מאד.' },
+  { type: 'memory', name: "תומר ברדה", text: 'היה איש משכמו ומעלה. עם כמה שהיה אדם שנתנו לו הרבה כבוד — נשאר צנוע. למדתי ממנו הרבה. כל כך כואב, ועם זאת — זכות גדולה הייתה להכיר אותו.' },
+  { type: 'memory', name: "סימה הילר", text: 'דורון מרגיטאי האחד והיחיד. לא היה ולא יהיה פראמדיק כמותו.\n\nהייתה לי הזכות להכיר אותו, ללמוד ממנו ולסייע לו בהחייאות רבות ואף בהדרכת קורס פרמדיק מספר 20. מעבר ליכולתו המקצועית יוצאת הדופן — היה גם איש של ערכים ונתינה.\n\nעשינו שמיניות רק כדי לעשות איתו עוד משמרת וללמוד מהאיש הקסום הזה עוד קצת. חולון איבדה את הפרמדיק מספר 1. יהי זכרו ברוך!' },
+  { type: 'memory', name: "איתמר אהרונסון", text: 'היה איש.\nהיה אנושי.\nאהבתי אותו.' },
+];
+
+const quotes = [
+  "חולה שאומר לך שהוא עומד למות — תאמין לו",
+  "תשמע, תן לי משהו להגיד לך — החולה הזה לא קרא את הפרוטוקול",
+  "אם חולה שנראה חרא אומר שצריך לשירותים, כנראה שזו היציאה האחרונה",
+  "אם חולה עם כאב בחזה מתמוטט — זה VF עד שיוכח אחרת",
+  "זה אחד המקרים האלה — או שזה קטסטרופה, או חרטאסטרופה",
+  "אל תסתכל על המוניטור, תסתכל על החולה",
+  "עזוב את האק\"ג, תסתכל על החולה — הוא חוסם LAD",
+  "אתה אולי רגוע (אומר לחולה) — אבל אני בכלל לא",
+  "אין דבר יותר קשה מלטפל בפסיכיאטרי אינטליגנטי — הוא יודע בדיוק איך להתנהג, מה להגיד, ויותר חשוב, מה לא להגיד",
+  "אני מכיר את המבט הזה, ואני לא אוהב אותו",
+  "כשהגעתי לחולה הזה הוא היה סגול כמו חציל",
+  "אל תתייחס ללחץ דם — זה או פיצוי, או שהקורפולס מטומטם גם ככה",
+  "אם כל המשפחה מודאגים ורק החולה רגוע — יש לך סיבה טובה לדאוג",
+  "יש שני דברים שאני הכי מפחד מהם: האחד זה כאבים בחזה רבע שעה לפני סוף המשמרת, והשני זה קומה רביעית בלי מעלית. במקרה שלנו קיבלנו את שניהם",
+  "עכשיו השעה רבע לשלוש. אנחנו הולכים לעשות נוהל סחרחורת — קודם נוסעים לבית חולים ואז מבינים מה יש לחולה",
+  "כל בצקת ריאות בבית אבות היא ASPIRATION PNEUMONIA עד שלא יוכח אחרת",
+  "עשינו מה שאפשר — עכשיו זה כבר תהילים פורטה",
+  "דמנטי, מונשם כרוני, מוזן בזונדה ומשתין לשקית שתן — נפלאות הרפואה המודרנית",
+  "מה זה מצב חירום בטני? אני 30 שנה במד\"א ובחיים לא ראיתי מצב חירום בטני",
+  "לב לא דופק — הוא פועם. אם לב היה דופק, הוא היה לב שמח",
+  "בית אבות רחל ליצ'ק זה מלון 3 כוכבים בהשוואה לבית בלב בבת-ים או טולוז 8 ביפו",
+];
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Build combined list: memories + one card per quote
+const quoteCards = quotes.map(q => ({ type: 'quote', text: q }));
+const allCards = shuffle([...memories, ...quoteCards]);
+
+function renderCards(typeFilter) {
+  const grid = document.getElementById('memoriesGrid');
+  grid.innerHTML = '';
+  const filtered = typeFilter === 'all' ? allCards : allCards.filter(c => c.type === typeFilter);
+  filtered.forEach((card, i) => {
+    const el = document.createElement('div');
+    el.style.animationDelay = `${i * 0.04}s`;
+    if (card.type === 'quote') {
+      el.className = 'quote-card';
+      el.innerHTML = `
+        <span class="quote-mark">"</span>
+        <div class="quote-text">${card.text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+        <div class="quote-label">✦ אמרה של דורון</div>
+      `;
+    } else {
+      el.className = 'memory-card';
+      el.innerHTML = `
+        <div class="memory-text">${card.text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+        <div class="memory-footer">
+          <div class="memory-avatar">${card.name.trim()[0]}</div>
+          <div class="memory-name">${card.name}</div>
+        </div>
+      `;
+    }
+    grid.appendChild(el);
+  });
+}
+
+function filter(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards(type);
+}
+
+renderCards('all');
+</script>
+</body>
+</html>

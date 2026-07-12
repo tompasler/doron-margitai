@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>פרס אפלבאום — דורון מרגיטאי ז"ל</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&family=Heebo:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: #0a0a0a;
+  color: #e8e0d0;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+.page-header {
+  background: linear-gradient(to bottom, #1a1510, #0a0a0a);
+  padding: 70px 40px 50px;
+  text-align: center;
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+}
+.back-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #c9a96e; text-decoration: none; font-size: 14px;
+  letter-spacing: 1px; margin-bottom: 30px;
+  opacity: 0.7; transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 1; }
+.award-icon { font-size: 60px; margin-bottom: 20px; }
+.page-label { font-size: 11px; letter-spacing: 4px; color: #c9a96e; text-transform: uppercase; margin-bottom: 12px; }
+.page-title {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700; color: #e8e0d0; margin-bottom: 10px; line-height: 1.2;
+}
+.page-sub { font-size: 16px; color: #888; line-height: 1.7; }
+.divider {
+  width: 100px; height: 1px;
+  background: linear-gradient(to left, transparent, #c9a96e, transparent);
+  margin: 24px auto 0;
+}
+
+/* ── CONTENT ── */
+.content {
+  max-width: 780px; margin: 0 auto; padding: 70px 40px 80px;
+}
+
+/* Pull quote opener */
+.opener {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(20px, 3vw, 28px);
+  color: #c9a96e; line-height: 1.7;
+  text-align: center; padding: 0 20px 50px;
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+  margin-bottom: 50px;
+}
+.opener::before {
+  content: '"';
+  display: block; font-size: 70px; line-height: 0.5;
+  color: rgba(201,169,110,0.25); margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Section headers */
+.speech-section {
+  margin-bottom: 50px;
+}
+.speech-section-title {
+  font-size: 11px; letter-spacing: 3px; color: #c9a96e;
+  text-transform: uppercase; margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+}
+
+/* Body text */
+.speech-text {
+  font-size: 17px; line-height: 2; color: #c0b8a8;
+}
+.speech-text p { margin-bottom: 22px; }
+.speech-text p:last-child { margin-bottom: 0; }
+
+/* Memorial names */
+.memorial-list {
+  margin: 24px 0;
+  padding: 28px 32px;
+  background: rgba(201,169,110,0.05);
+  border: 1px solid rgba(201,169,110,0.15);
+  border-radius: 4px;
+}
+.memorial-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(201,169,110,0.1);
+}
+.memorial-item:last-child { border-bottom: none; padding-bottom: 0; }
+.memorial-name {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 18px; color: #c9a96e; margin-bottom: 6px;
+}
+.memorial-desc { font-size: 15px; color: #999; line-height: 1.7; }
+
+/* Highlight quote */
+.highlight {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: #d8ceb8; line-height: 1.7;
+  padding: 30px 36px;
+  border-right: 3px solid #c9a96e;
+  background: rgba(201,169,110,0.05);
+  margin: 32px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Closing */
+.closing {
+  margin-top: 60px; padding-top: 40px;
+  border-top: 1px solid rgba(201,169,110,0.15);
+  text-align: center;
+}
+.closing-text {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: #c9a96e; line-height: 1.7; margin-bottom: 16px;
+}
+.closing-sub { font-size: 14px; color: #666; letter-spacing: 1px; }
+
+footer {
+  text-align: center; padding: 40px;
+  border-top: 1px solid rgba(201,169,110,0.1);
+  color: #555; font-size: 13px; line-height: 1.8;
+}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back-link">← חזרה לדף הראשי</a>
+  <div class="award-icon">🏆</div>
+  <div class="page-label">בדברי דורון</div>
+  <div class="page-title">נאום פרס מפעל חיים</div>
+  <div class="page-sub">
+    דברים שכתב וביקש לפרסם דורון מרגיטאי<br>
+    לאחר זכייתו בפרס אפלבאום למצוינות אישית, ערכית ומקצועית
+  </div>
+  <div class="divider"></div>
+</div>
+
+<div class="content">
+
+  <div class="opener">
+    מפעל החיים שייך לכולכם — לכל הפרמדיקים, עוזרי הרופא והמדריכים שהיו שותפים לו
+  </div>
+
+  <!-- לזכר -->
+  <div class="speech-section">
+    <div class="speech-section-title">לזכרם</div>
+    <div class="speech-text">
+      <p>בתחילת דברי אני רוצה להזכיר את שמותיהם של ארבעה רופאים יקרים ומסורים, שהיו לי באופן אישי ובוודאי גם לרבים מכם היושבים כאן, משואה של אור מקצועי, מסירות וחשיבות בהתפתחות המקצועית של אנשי רפואת החירום בישראל — ולצערי הלכו מאיתנו בטרם עת:</p>
+    </div>
+
+    <div class="memorial-list">
+      <div class="memorial-item">
+        <div class="memorial-name">ד"ר דוד אפלבאום</div>
+        <div class="memorial-desc">מנהל המיון בבית החולים שערי צדק. פעילותו הברוכה לקידום הטיפול בטראומה נגדעה באיבה כאשר נרצח בפיגוע מחבל מתאבד בספטמבר 2003 בבית קפה הלל בירושלים. יהיה זה מן הצדק לומר שד"ר אפלבאום, בעשייה הבלתי נלאית שלו ובנסיבות מותו הטרגיות, אכן נפל על משמרתו. יהי זכרו ברוך.</div>
+      </div>
+      <div class="memorial-item">
+        <div class="memorial-name">ד"ר סטיפן לנדס</div>
+        <div class="memorial-desc">קרדיולוג מאיכילוב, נפל במלחמת לבנון הראשונה ב-6 ביוני 1982 בפעולה מבצעית במסוק של יחידת החילוץ 669. מחלוצי הקמת מערך ניידות טיפול נמרץ בתל אביב — האיש שהצליח להוציא את מערך הטיפול המציל חיים מכתלי בית החולים אל השטח.</div>
+      </div>
+      <div class="memorial-item">
+        <div class="memorial-name">פרופסור אריה רוט</div>
+        <div class="memorial-desc">מנהל מחלקת ט.נ. לב בבית החולים איכילוב. אח ורע, מורה דרך ומנטור אישי לעובדי מחוז דן. הלך לעולמו בטרם עת בשנת 2015.</div>
+      </div>
+      <div class="memorial-item">
+        <div class="memorial-name">ד"ר דני סימון</div>
+        <div class="memorial-desc">מנהל מערך הטראומה בבית החולים שיבא, תל השומר. האיש שהיה שם תמיד, נכון לכל וקשוב לפרמדיקים בעבודתם. הלך לעולמו בשנת 2014.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- על הפרס -->
+  <div class="speech-section">
+    <div class="speech-section-title">על הפרס ועל מפעל החיים</div>
+    <div class="speech-text">
+      <p>לומר את האמת, מעבר לשמחה ולהתרגשות הרבה שהציפו אותי עם ההודעה על מועמדותי לפרס אפלבאום על מפעל חיים — חשתי גם מופתע מאד.</p>
+      <p>מעולם לא חשבתי, ולו לרגע, שאני עובד במפעל, אפילו שתמיד החתמתי כרטיס. ופעמים רבות במשך השנים אמרתי לעצמי: "אלה לא חיים".</p>
+    </div>
+
+    <div class="highlight">
+      מפעל חיים הוא לא רק אוסף של פעולות והישגים של אדם בודד — הוא תלכיד מורכב של אנשים רבים, העובדים וחולקים ידע וניסיון, ובניית מרקם של יחסי עבודה אישיים, שיתוף פעולה, הקרבה, חזון, השראה, והתמודדות עם קשיים, משברים וכישלונות.
+    </div>
+
+    <div class="speech-text">
+      <p>ולכן נכון יותר יהיה לומר שמפעל החיים שייך לכולכם — לכל הפרמדיקים, עוזרי הרופא והמדריכים שהיו שותפים לו, במד"א ובכל המוסדות הרפואיים האחרים שבהם הפרמדיקים השתלבו, צמחו והניבו פירות ברוכים של מקצועיות וידע.</p>
+      <p>אני רואה לי לחובה לציין בהערכה רבה את מגן דוד אדום — ארגון ההצלה הלאומי של ישראל, בו התחלתי לעבוד, עברתי את הכשרתי המקצועית ועבדתי כפרמדיק וכמדריך. מד"א חרת על דגלו לא רק את סמל המגן האדום, אלא היה גם עריסה ובית גידול מקצועי וחלוצי לאנשי רפואת החירום הטרום-אשפוזית בישראל.</p>
+      <p>זכיתי לא רק לעבוד בשטח, אלא גם להיות מודרך ומחונך על ידי כמה מהטובים שבטובים — כמו נעמי צבי, מדריכתי הראשונה המעולה והמסורה, שהיא גם שותפתי לפרס אפלבאום המכובד. התמזל מזלי גם ללמד ולהכשיר פרמדיקים רבים וטובים, אנשים משכמם ומעלה — שלמדתי מהם לא פחות משלימדתי אותם.</p>
+    </div>
+  </div>
+
+  <!-- על המקצוע -->
+  <div class="speech-section">
+    <div class="speech-section-title">על המקצוע ועל האנשים</div>
+    <div class="speech-text">
+      <p>אנו, הפרמדיקים, לא רבים במספר — ונכון יותר לומר אפילו מעטים מאד במסגרת הרחבה של אנשי מקצועות הרפואה. אף על פי כן, מעשינו ופעולותינו משפיעים בצורה דרמטית ומרחיקת לכת על רבים מאד — חולים, פצועים ובני משפחתם.</p>
+    </div>
+
+    <div class="highlight">
+      לדעתי והבנתי — אנחנו לא רק "טכנאי רפואת חירום". אנחנו אנשים שאכפת להם.
+    </div>
+
+    <div class="speech-text">
+      <p>כבד הוא נטל האחריות על כתפי הפרמדיק בעבודתו. רופאים מומחים, חדרי הלם וניתוח, ואמצעי טיפול משוכללים אינם זמינים לו מיידית לסיוע בהחלטות ובפרוצדורות שהוא נדרש לבצע כדי לשמר ולהציל חיים.</p>
+      <p>אנו חשופים לבני משפחה מבוהלים וחרדים ולציבור הרחב — ללא וילון או דלתות זכוכית אוטומטיות הנסגרות מאחורינו כמו בבית החולים. אנחנו מתאמצים לעשות את כל הנדרש ומעבר לכך. עייפים וגאים אנו חוזרים הביתה בסיום משמרת — בעיקר אם זכינו לבצע החייאה מוצלחת או טיפול מוצלח בחולה קשה ומורכב.</p>
+      <p>עם חלוף הזמן אנו לומדים להקים מחסומי הגנה רגשיים ומגדלים שריון מנטלי האמור להגן עלינו בהתמודדות עם חולי, זקנה, פציעות אנושות ומוות. אנו מתחילים את עבודתנו בשטח חדורי התלהבות ואנרגיות שאפילו הדפיברילטור החדיש ביותר ראוי להתקנא בהן.</p>
+      <p>אך בו בזמן מתרחשת תופעה מדאיגה — עובדים לא מעטים, לאחר תקופה של כארבע עד שש שנים, מתחילים להראות סימנים של שחיקה נפשית, תסכול ולאות פנימית קשה. נשחקים פיזית ורגשית, ואינם רואים עתיד ארוך טווח להמשך עיסוקם במקצוע. ועדיין רבים מאד מוצאים פורקן והקלה רגעית בתרופת הפלציבו הגרועה מכל — קיטורים מלווים בקפה.</p>
+    </div>
+
+    <div class="highlight">
+      הידידים הטובים של הפרמדיק בעבודתו היומיומית הם: יושרה מקצועית, בהירות וגמישות מחשבתית, ביקורת עצמית, אמפתיה ואנושיות.<br><br>
+      האויבים הגדולים ביותר הם: יהירות, סטגנציה חשיבתית, אטימות רגשית ואגו.
+    </div>
+  </div>
+
+  <!-- סיום -->
+  <div class="closing">
+    <div class="closing-text">
+      הפרס האמיתי שזכיתי בו הוא הזכות לקבל אותו מכם — כל אותם חברים לעבודה ולהדרכה, אנשים שהיו חניכים ומשתלמים שלי לאורך שנות עבודתי.
+    </div>
+    <div class="closing-sub">
+      לראות כיצד פרשתם כנפיים, התקדמתם, והמשכתם לשמר את הלהבה הפנימית של המקצוע —<br>
+      קדימה, ובמעלה הדרך הקשה, הסיזיפית והמכובדת שבה צועדים ללא ליאות ובגאווה<br>
+      אנשי רפואת החירום.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  לזכרו של דורון מרגיטאי ז"ל<br>
+  פרמדיק מספר 151 • מדריך ראשי • מגן דוד אדום<br>
+  1961 — 2025
+</footer>
+
+</body>
+</html>
